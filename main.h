@@ -32,5 +32,6 @@ int print_rev(va_list arg);
 char *rev_str(char *);
 int print_un_num(unsigned int);
 char *_memcpy(char *dest, char *str, unsigned int n);
+int print_percent(va_list);
 
 #endif
