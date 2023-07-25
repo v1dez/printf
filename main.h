@@ -31,6 +31,6 @@ int un_int(va_list);
 int print_rev(va_list arg);
 char *rev_str(char *);
 int print_un_num(unsigned int);
-char *_memcpy(char *dest, char *src, unsigned int n);
+char *_memcpy(char *dest, char *str, unsigned int n);
 
 #endif
