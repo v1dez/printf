@@ -9,8 +9,8 @@
 
 /**
  * struct convert - ....
- * @sym: 
- * @f: 
+ * @sym: .....
+ * @f: ......
  */
 struct convert
 {
@@ -20,7 +20,7 @@ struct convert
 typedef struct convert conver_t;
 
 int _printf(const char *format, ...);
-int parser(const char *format, conver_t f_list[], va_list arg_list);
+int resolve(const char *format, conver_t f_list[], va_list arg_list);
 int put_char(char);
 int print_char(va_list);
 int print_str(va_list);
@@ -29,7 +29,7 @@ int print_int(va_list);
 int print_num(va_list);
 int un_int(va_list);
 int print_rev(va_list arg);
-char *rev_string(char *);
+char *rev_str(char *);
 int print_un_num(unsigned int);
 char *_memcpy(char *dest, char *src, unsigned int n);
 
