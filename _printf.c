@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 		{"s", print_str},
 		{"d", print_int},
 		{"u", un_int},
+		{"i", print_int},
 		{NULL, NULL}
 	};
 	va_list arg_list;
