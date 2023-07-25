@@ -17,33 +17,28 @@ int resolve(const char *format, conver_t f_list[], va_list arg_list)
 	{
 		if (format[a] == '%') /*Checks for format specifiers*/
 		{
-			/*Iterates through struct to find the right func*/
 			for (j = 0; f_list[j].sym != NULL; j++)
 			{
 				if (format[a + 1] == f_list[j].sym[0])
 				{
-
-				output = f_list[j].f(arg_list);
+					output = f_list[j].f(arg_list);
 				if (output == -1)
 					return (-1);
 				output += output;
 				break;
 				}
-				
 			}
 			if (f_list[j].sym == NULL && format[a + 1] != ' ')
 			{
-				if (format[a + 1] == '\0')
-				{
-					return (-1);
-				}
-				else
+				if (format[a + 1] != '\0')
 				{
 					put_char(format[a]);
 					put_char(format[a + 1]);
-					output = output + 2;
+					output += 2;
 				}
-	
+
+				else
+					return (-1);
 			}
 			a = a + 1; /*Updating i to skip format symbols*/
 		}
