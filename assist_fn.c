@@ -72,11 +72,11 @@ unsigned int base_len(unsigned int num, int base)
 /**
  * _memcpy - Copy memory from source to destination
  * @dest: the  destination
- * @src: source pointer
+ * @str: source pointer
  * @n: number of bytes
  * Return: Always success
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(char *dest, char *str, unsigned int n)
 {
 	char *start = dest;
 
